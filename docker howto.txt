@@ -1,0 +1,8 @@
+start docker using shortcut
+docker run -it debian bash
+dpkg -l - list packages
+
+
+custom image
+tengine
+libssl1.0-dev

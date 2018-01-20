@@ -1,0 +1,7 @@
+
+docker exec -it 695870fb10a2 /bin/bash
+
+or 
+
+docker run -it debian bash
+docker ps - to get name of existing container

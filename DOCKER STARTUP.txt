@@ -1,0 +1,1232 @@
+Creating CA: C:\Users\rujutakapadia\.docker\machine\certs\ca.pem
+Creating client certificate: C:\Users\rujutakapadia\.docker\machine\certs\cert.pem
+Running pre-create checks...
+(default) Image cache directory does not exist, creating it at C:\Users\rujutakapadia\.docker\machine\cache...
+(default) No default Boot2Docker ISO found locally, downloading the latest release...
+(default) Latest release for github.com/boot2docker/boot2docker is v18.01.0-ce
+(default) Downloading C:\Users\rujutakapadia\.docker\machine\cache\boot2docker.iso from https://github.com/boot2docker/boot2docker/releases/download/v18.01.0-ce/boot2docker.iso...
+(default) 0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Creating machine...
+(default) Copying C:\Users\rujutakapadia\.docker\machine\cache\boot2docker.iso to C:\Users\rujutakapadia\.docker\machine\machines\default\boot2docker.iso...
+(default) Creating VirtualBox VM...
+(default) Creating SSH key...
+(default) Starting the VM...
+(default) Check network to re-create if needed...
+(default) Windows might ask for the permission to create a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+(default) Found a new host-only adapter: "VirtualBox Host-Only Ethernet Adapter #2"
+(default) Windows might ask for the permission to configure a network adapter. Sometimes, such confirmation window is minimized in the taskbar.
+(default) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(default) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Maharsh\Workspace\Docker Toolbox\docker-machine.exe env default
+
+
+
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+Start interactive shell
+
+rujutakapadia@DrRujutaKapadia MINGW64 ~
+$ pwd
+/c/Users/rujutakapadia
+
+rujutakapadia@DrRujutaKapadia MINGW64 ~
+$ cd C:/DellStudio1555/C/Workspace/Sandbox/egghead/Sites/foodocker
+
+rujutakapadia@DrRujutaKapadia MINGW64 /c/DellStudio1555/C/Workspace/Sandbox/egghead/Sites/foodocker
+$ docker run -it debian bash
+Unable to find image 'debian:latest' locally
+latest: Pulling from library/debian
+723254a2c089: Pull complete
+Digest: sha256:0a5fcee6f52d5170f557ee2447d7a10a5bdcf715dd7f0250be0b678c556a501b
+Status: Downloaded newer image for debian:latest
+root@62b06c32c3c4:/# apt-get update
+Get:2 http://security.debian.org stretch/updates InRelease [63.0 kB]
+Get:4 http://security.debian.org stretch/updates/main amd64 Packages [337 kB]
+Ign:1 http://cdn-fastly.deb.debian.org/debian stretch InRelease
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch Release [118 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian stretch-updates/main amd64 Packages [6499 B]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch Release.gpg [2434 B]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 Packages [9531 kB]
+Fetched 10.1 MB in 56s (178 kB/s)
+Reading package lists... Done
+root@62b06c32c3c4:/# apt-get install -y curl
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates krb5-locales libcurl3 libffi6 libgmp10 libgnutls30 libgssapi-krb5-2 libhogweed4 libidn11 libidn2-0 libk5crypto3
+  libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common libnettle6 libnghttp2-14 libp11-kit0 libpsl5 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 libssl1.0.2 libssl1.1 libtasn1-6 libunistring0 openssl publicsuffix
+Suggested packages:
+  gnutls-bin krb5-doc krb5-user libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap
+  libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl krb5-locales libcurl3 libffi6 libgmp10 libgnutls30 libgssapi-krb5-2 libhogweed4 libidn11 libidn2-0
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.4-2 libldap-common libnettle6 libnghttp2-14 libp11-kit0 libpsl5
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 libssl1.0.2 libssl1.1 libtasn1-6 libunistring0 openssl
+  publicsuffix
+0 upgraded, 32 newly installed, 0 to remove and 1 not upgraded.
+Need to get 7941 kB of archives.
+After this operation, 20.4 MB of additional disk space will be used.
+Get:1 http://security.debian.org stretch/updates/main amd64 libssl1.0.2 amd64 1.0.2l-2+deb9u2 [1294 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libssl1.1 amd64 1.1.0f-3+deb9u1 [1342 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 krb5-locales all 1.15-1+deb9u1 [93.8 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libgmp10 amd64 2:6.1.2+dfsg-1 [253 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libnettle6 amd64 3.3-1+b2 [192 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libhogweed4 amd64 3.3-1+b2 [136 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libidn11 amd64 1.33-1 [115 kB]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libffi6 amd64 3.2.1-6 [20.4 kB]
+Get:9 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libp11-kit0 amd64 0.23.3-2 [111 kB]
+Get:10 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libtasn1-6 amd64 4.10-1.1 [50.4 kB]
+Get:11 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libgnutls30 amd64 3.5.8-5+deb9u3 [895 kB]
+Get:12 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libkeyutils1 amd64 1.5.9-9 [12.4 kB]
+Get:13 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libkrb5support0 amd64 1.15-1+deb9u1 [61.9 kB]
+Get:14 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libk5crypto3 amd64 1.15-1+deb9u1 [119 kB]
+Get:15 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libkrb5-3 amd64 1.15-1+deb9u1 [311 kB]
+Get:16 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libgssapi-krb5-2 amd64 1.15-1+deb9u1 [155 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsasl2-modules-db amd64 2.1.27~101-g0780600+dfsg-3 [68.2 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsasl2-2 amd64 2.1.27~101-g0780600+dfsg-3 [105 kB]
+Get:19 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libldap-common all 2.4.44+dfsg-5+deb9u1 [85.4 kB]
+Get:20 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libldap-2.4-2 amd64 2.4.44+dfsg-5+deb9u1 [219 kB]
+Get:21 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 openssl amd64 1.1.0f-3+deb9u1 [725 kB]
+Get:22 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 ca-certificates all 20161130+nmu1 [196 kB]
+Get:23 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libunistring0 amd64 0.9.6+really0.9.3-0.1 [279 kB]
+Get:24 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libidn2-0 amd64 0.16-1+deb9u1 [60.7 kB]
+Get:25 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libnghttp2-14 amd64 1.18.1-1 [79.1 kB]
+Get:26 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpsl5 amd64 0.17.0-3 [41.8 kB]
+Get:27 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-1+b1 [60.4 kB]
+Get:28 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libssh2-1 amd64 1.7.0-1 [138 kB]
+Get:29 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcurl3 amd64 7.52.1-5+deb9u3 [291 kB]
+Get:30 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 curl amd64 7.52.1-5+deb9u3 [227 kB]
+Get:31 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libsasl2-modules amd64 2.1.27~101-g0780600+dfsg-3 [102 kB]
+Get:32 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 publicsuffix all 20171028.2055-0+deb9u1 [101 kB]
+Fetched 7941 kB in 43s (181 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libssl1.0.2:amd64.
+(Reading database ... 6487 files and directories currently installed.)
+Preparing to unpack .../00-libssl1.0.2_1.0.2l-2+deb9u2_amd64.deb ...
+Unpacking libssl1.0.2:amd64 (1.0.2l-2+deb9u2) ...
+Selecting previously unselected package libssl1.1:amd64.
+Preparing to unpack .../01-libssl1.1_1.1.0f-3+deb9u1_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.0f-3+deb9u1) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../02-krb5-locales_1.15-1+deb9u1_all.deb ...
+Unpacking krb5-locales (1.15-1+deb9u1) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../03-libgmp10_2%3a6.1.2+dfsg-1_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.2+dfsg-1) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../04-libnettle6_3.3-1+b2_amd64.deb ...
+Unpacking libnettle6:amd64 (3.3-1+b2) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../05-libhogweed4_3.3-1+b2_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.3-1+b2) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../06-libidn11_1.33-1_amd64.deb ...
+Unpacking libidn11:amd64 (1.33-1) ...
+Selecting previously unselected package libffi6:amd64.
+Preparing to unpack .../07-libffi6_3.2.1-6_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-6) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../08-libp11-kit0_0.23.3-2_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.3-2) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../09-libtasn1-6_4.10-1.1_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.10-1.1) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../10-libgnutls30_3.5.8-5+deb9u3_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.5.8-5+deb9u3) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../11-libkeyutils1_1.5.9-9_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.5.9-9) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../12-libkrb5support0_1.15-1+deb9u1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.15-1+deb9u1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../13-libk5crypto3_1.15-1+deb9u1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.15-1+deb9u1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../14-libkrb5-3_1.15-1+deb9u1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.15-1+deb9u1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../15-libgssapi-krb5-2_1.15-1+deb9u1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.15-1+deb9u1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../16-libsasl2-modules-db_2.1.27~101-g0780600+dfsg-3_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../17-libsasl2-2_2.1.27~101-g0780600+dfsg-3_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../18-libldap-common_2.4.44+dfsg-5+deb9u1_all.deb ...
+Unpacking libldap-common (2.4.44+dfsg-5+deb9u1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../19-libldap-2.4-2_2.4.44+dfsg-5+deb9u1_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.44+dfsg-5+deb9u1) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../20-openssl_1.1.0f-3+deb9u1_amd64.deb ...
+Unpacking openssl (1.1.0f-3+deb9u1) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../21-ca-certificates_20161130+nmu1_all.deb ...
+Unpacking ca-certificates (20161130+nmu1) ...
+Selecting previously unselected package libunistring0:amd64.
+Preparing to unpack .../22-libunistring0_0.9.6+really0.9.3-0.1_amd64.deb ...
+Unpacking libunistring0:amd64 (0.9.6+really0.9.3-0.1) ...
+Selecting previously unselected package libidn2-0:amd64.
+Preparing to unpack .../23-libidn2-0_0.16-1+deb9u1_amd64.deb ...
+Unpacking libidn2-0:amd64 (0.16-1+deb9u1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../24-libnghttp2-14_1.18.1-1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.18.1-1) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../25-libpsl5_0.17.0-3_amd64.deb ...
+Unpacking libpsl5:amd64 (0.17.0-3) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../26-librtmp1_2.4+20151223.gitfa8646d.1-1+b1_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1+b1) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../27-libssh2-1_1.7.0-1_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.7.0-1) ...
+Selecting previously unselected package libcurl3:amd64.
+Preparing to unpack .../28-libcurl3_7.52.1-5+deb9u3_amd64.deb ...
+Unpacking libcurl3:amd64 (7.52.1-5+deb9u3) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../29-curl_7.52.1-5+deb9u3_amd64.deb ...
+Unpacking curl (7.52.1-5+deb9u3) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../30-libsasl2-modules_2.1.27~101-g0780600+dfsg-3_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../31-publicsuffix_20171028.2055-0+deb9u1_all.deb ...
+Unpacking publicsuffix (20171028.2055-0+deb9u1) ...
+Setting up libnettle6:amd64 (3.3-1+b2) ...
+Setting up libnghttp2-14:amd64 (1.18.1-1) ...
+Setting up libldap-common (2.4.44+dfsg-5+deb9u1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Setting up libsasl2-2:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Setting up libtasn1-6:amd64 (4.10-1.1) ...
+Setting up libssl1.0.2:amd64 (1.0.2l-2+deb9u2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libgmp10:amd64 (2:6.1.2+dfsg-1) ...
+Setting up libssh2-1:amd64 (1.7.0-1) ...
+Setting up krb5-locales (1.15-1+deb9u1) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+Setting up publicsuffix (20171028.2055-0+deb9u1) ...
+Setting up libunistring0:amd64 (0.9.6+really0.9.3-0.1) ...
+Setting up libssl1.1:amd64 (1.1.0f-3+deb9u1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up openssl (1.1.0f-3+deb9u1) ...
+Setting up libffi6:amd64 (3.2.1-6) ...
+Setting up libkeyutils1:amd64 (1.5.9-9) ...
+Setting up libsasl2-modules:amd64 (2.1.27~101-g0780600+dfsg-3) ...
+Setting up ca-certificates (20161130+nmu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+166 added, 0 removed; done.
+Setting up libidn11:amd64 (1.33-1) ...
+Setting up libidn2-0:amd64 (0.16-1+deb9u1) ...
+Setting up libpsl5:amd64 (0.17.0-3) ...
+Setting up libkrb5support0:amd64 (1.15-1+deb9u1) ...
+Setting up libhogweed4:amd64 (3.3-1+b2) ...
+Setting up libp11-kit0:amd64 (0.23.3-2) ...
+Setting up libk5crypto3:amd64 (1.15-1+deb9u1) ...
+Setting up libgnutls30:amd64 (3.5.8-5+deb9u3) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-1+b1) ...
+Setting up libldap-2.4-2:amd64 (2.4.44+dfsg-5+deb9u1) ...
+Setting up libkrb5-3:amd64 (1.15-1+deb9u1) ...
+Setting up libgssapi-krb5-2:amd64 (1.15-1+deb9u1) ...
+Setting up libcurl3:amd64 (7.52.1-5+deb9u3) ...
+Setting up curl (7.52.1-5+deb9u3) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+Processing triggers for ca-certificates (20161130+nmu1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+root@62b06c32c3c4:/# curl http://tengine.taobao.org/download/tengine-2.2.0.tar.gz > /opt/tengine-2.2.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 2110k  100 2110k    0     0   151k      0  0:00:13  0:00:13 --:--:--  209k
+root@62b06c32c3c4:/# cd /opt
+root@62b06c32c3c4:/opt# tar xzf tengine-2.2.0.tar.gz
+root@62b06c32c3c4:/opt# ls
+tengine-2.2.0  tengine-2.2.0.tar.gz
+root@62b06c32c3c4:/opt# cd tengine-2.2.0
+root@62b06c32c3c4:/opt/tengine-2.2.0# ls
+AUTHORS.te  CHANGES.cn  CHANGES.te  README           THANKS.te  conf       contrib  html  modules   src
+CHANGES     CHANGES.ru  LICENSE     README.markdown  auto       configure  docs     man   packages  tests
+root@62b06c32c3c4:/opt/tengine-2.2.0# app-get install -y gcc
+bash: app-get: command not found
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y gcc
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  binutils cpp cpp-6 gcc-6 libasan3 libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libgcc-6-dev libgomp1 libisl15 libitm1
+  liblsan0 libmpc3 libmpfr4 libmpx2 libquadmath0 libtsan0 libubsan0 linux-libc-dev manpages manpages-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-6-locales gcc-multilib make autoconf automake libtool flex bison gdb gcc-doc gcc-6-multilib gcc-6-doc
+  libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg libasan3-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg
+  libmpx2-dbg libquadmath0-dbg glibc-doc man-browser
+The following NEW packages will be installed:
+  binutils cpp cpp-6 gcc gcc-6 libasan3 libatomic1 libc-dev-bin libc6-dev libcc1-0 libcilkrts5 libgcc-6-dev libgomp1 libisl15
+  libitm1 liblsan0 libmpc3 libmpfr4 libmpx2 libquadmath0 libtsan0 libubsan0 linux-libc-dev manpages manpages-dev
+0 upgraded, 25 newly installed, 0 to remove and 1 not upgraded.
+Need to get 29.1 MB of archives.
+After this operation, 119 MB of additional disk space will be used.
+Get:1 http://security-cdn.debian.org stretch/updates/main amd64 linux-libc-dev amd64 4.9.65-3+deb9u2 [1299 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 manpages all 4.10-2 [1222 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 binutils amd64 2.28-5 [3770 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libisl15 amd64 0.18-1 [564 kB]
+Get:5 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libmpfr4 amd64 3.1.5-1 [556 kB]
+Get:6 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libmpc3 amd64 1.0.3-1+b2 [39.9 kB]
+Get:7 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 cpp-6 amd64 6.3.0-18 [6579 kB]
+Get:8 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 cpp amd64 4:6.3.0-4 [18.7 kB]
+Get:9 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcc1-0 amd64 6.3.0-18 [30.6 kB]
+Get:10 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libgomp1 amd64 6.3.0-18 [73.2 kB]
+Get:11 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libitm1 amd64 6.3.0-18 [27.4 kB]
+Get:12 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libatomic1 amd64 6.3.0-18 [8920 B]
+Get:13 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libasan3 amd64 6.3.0-18 [311 kB]
+Get:14 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 liblsan0 amd64 6.3.0-18 [115 kB]
+Get:15 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libtsan0 amd64 6.3.0-18 [257 kB]
+Get:16 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libubsan0 amd64 6.3.0-18 [106 kB]
+Get:17 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libcilkrts5 amd64 6.3.0-18 [40.4 kB]
+Get:18 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libmpx2 amd64 6.3.0-18 [11.2 kB]
+Get:19 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libquadmath0 amd64 6.3.0-18 [131 kB]
+Get:20 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libgcc-6-dev amd64 6.3.0-18 [2297 kB]
+Get:21 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 gcc-6 amd64 6.3.0-18 [6895 kB]
+Get:22 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 gcc amd64 4:6.3.0-4 [5196 B]
+Get:23 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libc-dev-bin amd64 2.24-11+deb9u1 [259 kB]
+Get:24 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libc6-dev amd64 2.24-11+deb9u1 [2365 kB]
+Get:25 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 manpages-dev all 4.10-2 [2145 kB]
+Fetched 29.1 MB in 55s (529 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package manpages.
+(Reading database ... 7067 files and directories currently installed.)
+Preparing to unpack .../00-manpages_4.10-2_all.deb ...
+Unpacking manpages (4.10-2) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../01-binutils_2.28-5_amd64.deb ...
+Unpacking binutils (2.28-5) ...
+Selecting previously unselected package libisl15:amd64.
+Preparing to unpack .../02-libisl15_0.18-1_amd64.deb ...
+Unpacking libisl15:amd64 (0.18-1) ...
+Selecting previously unselected package libmpfr4:amd64.
+Preparing to unpack .../03-libmpfr4_3.1.5-1_amd64.deb ...
+Unpacking libmpfr4:amd64 (3.1.5-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../04-libmpc3_1.0.3-1+b2_amd64.deb ...
+Unpacking libmpc3:amd64 (1.0.3-1+b2) ...
+Selecting previously unselected package cpp-6.
+Preparing to unpack .../05-cpp-6_6.3.0-18_amd64.deb ...
+Unpacking cpp-6 (6.3.0-18) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../06-cpp_4%3a6.3.0-4_amd64.deb ...
+Unpacking cpp (4:6.3.0-4) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../07-libcc1-0_6.3.0-18_amd64.deb ...
+Unpacking libcc1-0:amd64 (6.3.0-18) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../08-libgomp1_6.3.0-18_amd64.deb ...
+Unpacking libgomp1:amd64 (6.3.0-18) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../09-libitm1_6.3.0-18_amd64.deb ...
+Unpacking libitm1:amd64 (6.3.0-18) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../10-libatomic1_6.3.0-18_amd64.deb ...
+Unpacking libatomic1:amd64 (6.3.0-18) ...
+Selecting previously unselected package libasan3:amd64.
+Preparing to unpack .../11-libasan3_6.3.0-18_amd64.deb ...
+Unpacking libasan3:amd64 (6.3.0-18) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../12-liblsan0_6.3.0-18_amd64.deb ...
+Unpacking liblsan0:amd64 (6.3.0-18) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../13-libtsan0_6.3.0-18_amd64.deb ...
+Unpacking libtsan0:amd64 (6.3.0-18) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../14-libubsan0_6.3.0-18_amd64.deb ...
+Unpacking libubsan0:amd64 (6.3.0-18) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../15-libcilkrts5_6.3.0-18_amd64.deb ...
+Unpacking libcilkrts5:amd64 (6.3.0-18) ...
+Selecting previously unselected package libmpx2:amd64.
+Preparing to unpack .../16-libmpx2_6.3.0-18_amd64.deb ...
+Unpacking libmpx2:amd64 (6.3.0-18) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../17-libquadmath0_6.3.0-18_amd64.deb ...
+Unpacking libquadmath0:amd64 (6.3.0-18) ...
+Selecting previously unselected package libgcc-6-dev:amd64.
+Preparing to unpack .../18-libgcc-6-dev_6.3.0-18_amd64.deb ...
+Unpacking libgcc-6-dev:amd64 (6.3.0-18) ...
+Selecting previously unselected package gcc-6.
+Preparing to unpack .../19-gcc-6_6.3.0-18_amd64.deb ...
+Unpacking gcc-6 (6.3.0-18) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../20-gcc_4%3a6.3.0-4_amd64.deb ...
+Unpacking gcc (4:6.3.0-4) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../21-libc-dev-bin_2.24-11+deb9u1_amd64.deb ...
+Unpacking libc-dev-bin (2.24-11+deb9u1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../22-linux-libc-dev_4.9.65-3+deb9u2_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.9.65-3+deb9u2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../23-libc6-dev_2.24-11+deb9u1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.24-11+deb9u1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../24-manpages-dev_4.10-2_all.deb ...
+Unpacking manpages-dev (4.10-2) ...
+Setting up libquadmath0:amd64 (6.3.0-18) ...
+Setting up libgomp1:amd64 (6.3.0-18) ...
+Setting up libatomic1:amd64 (6.3.0-18) ...
+Setting up manpages (4.10-2) ...
+Setting up libcc1-0:amd64 (6.3.0-18) ...
+Setting up libasan3:amd64 (6.3.0-18) ...
+Setting up libcilkrts5:amd64 (6.3.0-18) ...
+Setting up libubsan0:amd64 (6.3.0-18) ...
+Setting up libtsan0:amd64 (6.3.0-18) ...
+Setting up linux-libc-dev:amd64 (4.9.65-3+deb9u2) ...
+Setting up liblsan0:amd64 (6.3.0-18) ...
+Setting up libmpx2:amd64 (6.3.0-18) ...
+Setting up libisl15:amd64 (0.18-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+Setting up libmpfr4:amd64 (3.1.5-1) ...
+Setting up libmpc3:amd64 (1.0.3-1+b2) ...
+Setting up binutils (2.28-5) ...
+Setting up cpp-6 (6.3.0-18) ...
+Setting up libc-dev-bin (2.24-11+deb9u1) ...
+Setting up manpages-dev (4.10-2) ...
+Setting up libc6-dev:amd64 (2.24-11+deb9u1) ...
+Setting up libitm1:amd64 (6.3.0-18) ...
+Setting up cpp (4:6.3.0-4) ...
+Setting up libgcc-6-dev:amd64 (6.3.0-18) ...
+Setting up gcc-6 (6.3.0-18) ...
+Setting up gcc (4:6.3.0-4) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y libpcre3-dev
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libpcre16-3 libpcre32-3 libpcrecpp0v5
+The following NEW packages will be installed:
+  libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 1304 kB of archives.
+After this operation, 3579 kB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcrecpp0v5 amd64 2:8.39-3 [151 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcre16-3 amd64 2:8.39-3 [258 kB]
+Get:3 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcre32-3 amd64 2:8.39-3 [248 kB]
+Get:4 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libpcre3-dev amd64 2:8.39-3 [647 kB]
+Fetched 1304 kB in 42s (30.8 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libpcrecpp0v5:amd64.
+(Reading database ... 11359 files and directories currently installed.)
+Preparing to unpack .../libpcrecpp0v5_2%3a8.39-3_amd64.deb ...
+Unpacking libpcrecpp0v5:amd64 (2:8.39-3) ...
+Selecting previously unselected package libpcre16-3:amd64.
+Preparing to unpack .../libpcre16-3_2%3a8.39-3_amd64.deb ...
+Unpacking libpcre16-3:amd64 (2:8.39-3) ...
+Selecting previously unselected package libpcre32-3:amd64.
+Preparing to unpack .../libpcre32-3_2%3a8.39-3_amd64.deb ...
+Unpacking libpcre32-3:amd64 (2:8.39-3) ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../libpcre3-dev_2%3a8.39-3_amd64.deb ...
+Unpacking libpcre3-dev:amd64 (2:8.39-3) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+Setting up libpcrecpp0v5:amd64 (2:8.39-3) ...
+Setting up libpcre32-3:amd64 (2:8.39-3) ...
+Setting up libpcre16-3:amd64 (2:8.39-3) ...
+Setting up libpcre3-dev:amd64 (2:8.39-3) ...
+Processing triggers for libc-bin (2.24-11+deb9u1) ...
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y libssl-dev
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libssl-doc
+The following NEW packages will be installed:
+  libssl-dev libssl-doc
+0 upgraded, 2 newly installed, 0 to remove and 1 not upgraded.
+Need to get 3031 kB of archives.
+After this operation, 11.6 MB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libssl-dev amd64 1.1.0f-3+deb9u1 [1575 kB]
+Get:2 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 libssl-doc all 1.1.0f-3+deb9u1 [1456 kB]
+Fetched 3031 kB in 42s (70.6 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libssl-dev:amd64.
+(Reading database ... 11509 files and directories currently installed.)
+Preparing to unpack .../libssl-dev_1.1.0f-3+deb9u1_amd64.deb ...
+Unpacking libssl-dev:amd64 (1.1.0f-3+deb9u1) ...
+Selecting previously unselected package libssl-doc.
+Preparing to unpack .../libssl-doc_1.1.0f-3+deb9u1_all.deb ...
+Unpacking libssl-doc (1.1.0f-3+deb9u1) ...
+Setting up libssl-dev:amd64 (1.1.0f-3+deb9u1) ...
+Setting up libssl-doc (1.1.0f-3+deb9u1) ...
+root@62b06c32c3c4:/opt/tengine-2.2.0# ./configure
+checking for OS
+ + Linux 4.4.111-boot2docker x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 6.3.0 20170516 (Debian 6.3.0-18)
+checking for gcc -pipe switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for compiler structure-packing pragma ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for EPOLLRDHUP ... found
+checking for O_PATH ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for sched_setaffinity() ... found
+checking for crypt_r() ... found
+checking for SO_REUSEPORT ... found
+checking for sys/vfs.h ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sysinfo() ... found
+checking for getloadavg() ... found
+checking for /proc/meminfo ... found
+checking for sched_yield() ... found
+checking for SO_SETFIB ... not found
+checking for SO_ACCEPTFILTER ... not found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE ... found
+checking for TCP_FASTOPEN ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for eventfd() ... found
+checking for int size ... 4 bytes
+checking for long size ... 8 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 8 bytes
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 8 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 8 bytes
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for OpenSSL library ... found
+checking for zlib library ... not found
+
+./configure: error: the HTTP gzip module requires the zlib library.
+You can either disable the module by using --without-http_gzip_module
+option, or install the zlib library into the system, or build the zlib library
+statically from the source with nginx by using --with-zlib=<path> option.
+
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y zlib
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package zlib
+root@62b06c32c3c4:/opt/tengine-2.2.0# ./configure
+checking for OS
+ + Linux 4.4.111-boot2docker x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 6.3.0 20170516 (Debian 6.3.0-18)
+checking for gcc -pipe switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for compiler structure-packing pragma ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for EPOLLRDHUP ... found
+checking for O_PATH ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for sched_setaffinity() ... found
+checking for crypt_r() ... found
+checking for SO_REUSEPORT ... found
+checking for sys/vfs.h ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sysinfo() ... found
+checking for getloadavg() ... found
+checking for /proc/meminfo ... found
+checking for sched_yield() ... found
+checking for SO_SETFIB ... not found
+checking for SO_ACCEPTFILTER ... not found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE ... found
+checking for TCP_FASTOPEN ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for eventfd() ... found
+checking for int size ... 4 bytes
+checking for long size ... 8 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 8 bytes
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 8 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 8 bytes
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for OpenSSL library ... found
+checking for zlib library ... not found
+
+./configure: error: the HTTP gzip module requires the zlib library.
+You can either disable the module by using --without-http_gzip_module
+option, or install the zlib library into the system, or build the zlib library
+statically from the source with nginx by using --with-zlib=<path> option.
+
+root@62b06c32c3c4:/opt/tengine-2.2.0# yum install -y httpd-devel pcre perl pcre-devel zlib zlib-devel GeoIP GeoIP-devel
+bash: yum: command not found
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y zlib
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package zlib
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y zlib1g-dev
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  zlib1g-dev
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+Need to get 205 kB of archives.
+After this operation, 424 kB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 zlib1g-dev amd64 1:1.2.8.dfsg-5 [205 kB]
+Fetched 205 kB in 42s (4779 B/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package zlib1g-dev:amd64.
+(Reading database ... 14770 files and directories currently installed.)
+Preparing to unpack .../zlib1g-dev_1%3a1.2.8.dfsg-5_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.8.dfsg-5) ...
+Setting up zlib1g-dev:amd64 (1:1.2.8.dfsg-5) ...
+root@62b06c32c3c4:/opt/tengine-2.2.0# ./configure
+checking for OS
+ + Linux 4.4.111-boot2docker x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 6.3.0 20170516 (Debian 6.3.0-18)
+checking for gcc -pipe switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for compiler structure-packing pragma ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for EPOLLRDHUP ... found
+checking for O_PATH ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for sched_setaffinity() ... found
+checking for crypt_r() ... found
+checking for SO_REUSEPORT ... found
+checking for sys/vfs.h ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sysinfo() ... found
+checking for getloadavg() ... found
+checking for /proc/meminfo ... found
+checking for sched_yield() ... found
+checking for SO_SETFIB ... not found
+checking for SO_ACCEPTFILTER ... not found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE ... found
+checking for TCP_FASTOPEN ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for eventfd() ... found
+checking for int size ... 4 bytes
+checking for long size ... 8 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 8 bytes
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 8 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 8 bytes
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for OpenSSL library ... found
+checking for zlib library ... found
+creating objs/Makefile
+
+Configuration summary
+  + using system PCRE library
+  + using system OpenSSL library
+  + md5: using OpenSSL library
+  + sha1: using OpenSSL library
+  + using system zlib library
+  + jemalloc library is disabled
+
+  nginx path prefix: "/usr/local/nginx"
+  nginx binary file: "/usr/local/nginx/sbin/nginx"
+  nginx configuration prefix: "/usr/local/nginx/conf"
+  nginx configuration file: "/usr/local/nginx/conf/nginx.conf"
+  nginx pid file: "/usr/local/nginx/logs/nginx.pid"
+  nginx error log file: "/usr/local/nginx/logs/error.log"
+  nginx http access log file: "/usr/local/nginx/logs/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx dso module path: "/usr/local/nginx/modules/"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"
+
+root@62b06c32c3c4:/opt/tengine-2.2.0# apt-get install -y make
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  make-doc
+The following NEW packages will be installed:
+  make
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+Need to get 302 kB of archives.
+After this operation, 1240 kB of additional disk space will be used.
+Get:1 http://cdn-fastly.deb.debian.org/debian stretch/main amd64 make amd64 4.1-9.1 [302 kB]
+Fetched 302 kB in 41s (7217 B/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package make.
+(Reading database ... 14799 files and directories currently installed.)
+Preparing to unpack .../make_4.1-9.1_amd64.deb ...
+Unpacking make (4.1-9.1) ...
+Setting up make (4.1-9.1) ...
+root@62b06c32c3c4:/opt/tengine-2.2.0# make
+make -f objs/Makefile
+make[1]: Entering directory '/opt/tengine-2.2.0'
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/nginx.o \
+        src/core/nginx.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_log.o \
+        src/core/ngx_log.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_palloc.o \
+        src/core/ngx_palloc.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_array.o \
+        src/core/ngx_array.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_list.o \
+        src/core/ngx_list.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_hash.o \
+        src/core/ngx_hash.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_buf.o \
+        src/core/ngx_buf.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_queue.o \
+        src/core/ngx_queue.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_output_chain.o \
+        src/core/ngx_output_chain.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_string.o \
+        src/core/ngx_string.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_parse.o \
+        src/core/ngx_parse.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_inet.o \
+        src/core/ngx_inet.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_file.o \
+        src/core/ngx_file.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_crc32.o \
+        src/core/ngx_crc32.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_murmurhash.o \
+        src/core/ngx_murmurhash.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_md5.o \
+        src/core/ngx_md5.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_rbtree.o \
+        src/core/ngx_rbtree.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_trie.o \
+        src/core/ngx_trie.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_segment_tree.o \
+        src/core/ngx_segment_tree.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_radix_tree.o \
+        src/core/ngx_radix_tree.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_slab.o \
+        src/core/ngx_slab.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_times.o \
+        src/core/ngx_times.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_shmtx.o \
+        src/core/ngx_shmtx.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_connection.o \
+        src/core/ngx_connection.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_cycle.o \
+        src/core/ngx_cycle.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_spinlock.o \
+        src/core/ngx_spinlock.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_cpuinfo.o \
+        src/core/ngx_cpuinfo.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_conf_file.o \
+        src/core/ngx_conf_file.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_resolver.o \
+        src/core/ngx_resolver.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_open_file_cache.o \
+        src/core/ngx_open_file_cache.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_crypt.o \
+        src/core/ngx_crypt.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_proxy_protocol.o \
+        src/core/ngx_proxy_protocol.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_syslog.o \
+        src/core/ngx_syslog.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event.o \
+        src/event/ngx_event.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_timer.o \
+        src/event/ngx_event_timer.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_posted.o \
+        src/event/ngx_event_posted.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_accept.o \
+        src/event/ngx_event_accept.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_connect.o \
+        src/event/ngx_event_connect.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_pipe.o \
+        src/event/ngx_event_pipe.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_time.o \
+        src/os/unix/ngx_time.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_errno.o \
+        src/os/unix/ngx_errno.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_alloc.o \
+        src/os/unix/ngx_alloc.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_files.o \
+        src/os/unix/ngx_files.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_socket.o \
+        src/os/unix/ngx_socket.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_recv.o \
+        src/os/unix/ngx_recv.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_readv_chain.o \
+        src/os/unix/ngx_readv_chain.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_udp_recv.o \
+        src/os/unix/ngx_udp_recv.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_send.o \
+        src/os/unix/ngx_send.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_writev_chain.o \
+        src/os/unix/ngx_writev_chain.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_channel.o \
+        src/os/unix/ngx_channel.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_shmem.o \
+        src/os/unix/ngx_shmem.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_process.o \
+        src/os/unix/ngx_process.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_daemon.o \
+        src/os/unix/ngx_daemon.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_setproctitle.o \
+        src/os/unix/ngx_setproctitle.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_posix_init.o \
+        src/os/unix/ngx_posix_init.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_user.o \
+        src/os/unix/ngx_user.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_pipe.o \
+        src/os/unix/ngx_pipe.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_sysinfo.o \
+        src/os/unix/ngx_sysinfo.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_process_cycle.o \
+        src/os/unix/ngx_process_cycle.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_linux_init.o \
+        src/os/unix/ngx_linux_init.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/modules/ngx_epoll_module.o \
+        src/event/modules/ngx_epoll_module.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/os/unix/ngx_linux_sendfile_chain.o \
+        src/os/unix/ngx_linux_sendfile_chain.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/core/ngx_dso_module.o \
+        src/core/ngx_dso_module.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/proc/ngx_proc.o \
+        src/proc/ngx_proc.c
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_openssl.o \
+        src/event/ngx_event_openssl.c
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_init':
+src/event/ngx_event_openssl.c:112:5: error: 'OPENSSL_config' is deprecated [-Werror=deprecated-declarations]
+     OPENSSL_config(NULL);
+     ^~~~~~~~~~~~~~
+In file included from /usr/include/openssl/ct.h:13:0,
+                 from /usr/include/openssl/ssl.h:61,
+                 from src/event/ngx_event_openssl.h:15,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/conf.h:92:1: note: declared here
+ DEPRECATEDIN_1_1_0(void OPENSSL_config(const char *config_name))
+ ^
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_rsa512_key_callback':
+src/event/ngx_event_openssl.c:753:9: error: 'RSA_generate_key' is deprecated [-Werror=deprecated-declarations]
+         key = RSA_generate_key(512, RSA_F4, NULL, NULL);
+         ^~~
+In file included from /usr/include/openssl/rsa.h:13:0,
+                 from /usr/include/openssl/x509.h:31,
+                 from /usr/include/openssl/ssl.h:50,
+                 from src/event/ngx_event_openssl.h:15,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/rsa.h:193:1: note: declared here
+ DEPRECATEDIN_0_9_8(RSA *RSA_generate_key(int bits, unsigned long e, void
+ ^
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_dhparam':
+src/event/ngx_event_openssl.c:943:11: error: dereferencing pointer to incomplete type 'DH {aka struct dh_st}'
+         dh->p = BN_bin2bn(dh1024_p, sizeof(dh1024_p), NULL);
+           ^~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_handshake':
+src/event/ngx_event_openssl.c:1166:31: error: dereferencing pointer to incomplete type 'SSL {aka struct ssl_st}'
+         if (c->ssl->connection->s3) {
+                               ^~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_connection_error':
+src/event/ngx_event_openssl.c:1928:21: error: 'SSL_R_NO_CIPHERS_PASSED' undeclared (first use in this function)
+             || n == SSL_R_NO_CIPHERS_PASSED                          /*  182 */
+                     ^~~~~~~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c:1928:21: note: each undeclared identifier is reported only once for each function it appears in
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_cache':
+src/event/ngx_event_openssl.c:2122:43: error: passing argument 2 of 'SSL_CTX_sess_set_get_cb' from incompatible pointer type [-Werror=incompatible-pointer-types]
+         SSL_CTX_sess_set_get_cb(ssl->ctx, ngx_ssl_get_cached_session);
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/event/ngx_event_openssl.h:15:0,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/ssl.h:637:6: note: expected 'SSL_SESSION * (*)(struct ssl_st *, const unsigned char *, int,  int *) {aka struct ssl_session_st * (*)(struct ssl_st *, const unsigned char *, int,  int *)}' but argument is of type 'SSL_SESSION * (*)(SSL *, u_char *, int,  int *) {aka struct ssl_session_st * (*)(struct ssl_st *, unsigned char *, int,  int *)}'
+ void SSL_CTX_sess_set_get_cb(SSL_CTX *ctx,
+      ^~~~~~~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_id_context':
+src/event/ngx_event_openssl.c:2144:27: error: storage size of 'md' isn't known
+     EVP_MD_CTX            md;
+                           ^~
+src/event/ngx_event_openssl.c:2210:5: error: implicit declaration of function 'EVP_MD_CTX_cleanup' [-Werror=implicit-function-declaration]
+     EVP_MD_CTX_cleanup(&md);
+     ^~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_ticket_key_callback':
+src/event/ngx_event_openssl.c:2872:9: error: 'RAND_pseudo_bytes' is deprecated [-Werror=deprecated-declarations]
+         RAND_pseudo_bytes(iv, 16);
+         ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/openssl/engine.h:19:0,
+                 from src/event/ngx_event_openssl.h:22,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/rand.h:47:1: note: declared here
+ DEPRECATEDIN_1_1_0(int RAND_pseudo_bytes(unsigned char *buf, int num))
+ ^
+cc1: all warnings being treated as errors
+objs/Makefile:827: recipe for target 'objs/src/event/ngx_event_openssl.o' failed
+make[1]: *** [objs/src/event/ngx_event_openssl.o] Error 1
+make[1]: Leaving directory '/opt/tengine-2.2.0'
+Makefile:8: recipe for target 'build' failed
+make: *** [build] Error 2
+root@62b06c32c3c4:/opt/tengine-2.2.0# make
+make -f objs/Makefile
+make[1]: Entering directory '/opt/tengine-2.2.0'
+cc -c -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g  -I src/core -I src/event -I src/event/modules -I src/os/unix -I src/proc -I objs \
+        -o objs/src/event/ngx_event_openssl.o \
+        src/event/ngx_event_openssl.c
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_init':
+src/event/ngx_event_openssl.c:112:5: error: 'OPENSSL_config' is deprecated [-Werror=deprecated-declarations]
+     OPENSSL_config(NULL);
+     ^~~~~~~~~~~~~~
+In file included from /usr/include/openssl/ct.h:13:0,
+                 from /usr/include/openssl/ssl.h:61,
+                 from src/event/ngx_event_openssl.h:15,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/conf.h:92:1: note: declared here
+ DEPRECATEDIN_1_1_0(void OPENSSL_config(const char *config_name))
+ ^
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_rsa512_key_callback':
+src/event/ngx_event_openssl.c:753:9: error: 'RSA_generate_key' is deprecated [-Werror=deprecated-declarations]
+         key = RSA_generate_key(512, RSA_F4, NULL, NULL);
+         ^~~
+In file included from /usr/include/openssl/rsa.h:13:0,
+                 from /usr/include/openssl/x509.h:31,
+                 from /usr/include/openssl/ssl.h:50,
+                 from src/event/ngx_event_openssl.h:15,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/rsa.h:193:1: note: declared here
+ DEPRECATEDIN_0_9_8(RSA *RSA_generate_key(int bits, unsigned long e, void
+ ^
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_dhparam':
+src/event/ngx_event_openssl.c:943:11: error: dereferencing pointer to incomplete type 'DH {aka struct dh_st}'
+         dh->p = BN_bin2bn(dh1024_p, sizeof(dh1024_p), NULL);
+           ^~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_handshake':
+src/event/ngx_event_openssl.c:1166:31: error: dereferencing pointer to incomplete type 'SSL {aka struct ssl_st}'
+         if (c->ssl->connection->s3) {
+                               ^~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_connection_error':
+src/event/ngx_event_openssl.c:1928:21: error: 'SSL_R_NO_CIPHERS_PASSED' undeclared (first use in this function)
+             || n == SSL_R_NO_CIPHERS_PASSED                          /*  182 */
+                     ^~~~~~~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c:1928:21: note: each undeclared identifier is reported only once for each function it appears in
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_cache':
+src/event/ngx_event_openssl.c:2122:43: error: passing argument 2 of 'SSL_CTX_sess_set_get_cb' from incompatible pointer type [-Werror=incompatible-pointer-types]
+         SSL_CTX_sess_set_get_cb(ssl->ctx, ngx_ssl_get_cached_session);
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/event/ngx_event_openssl.h:15:0,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/ssl.h:637:6: note: expected 'SSL_SESSION * (*)(struct ssl_st *, const unsigned char *, int,  int *) {aka struct ssl_session_st * (*)(struct ssl_st *, const unsigned char *, int,  int *)}' but argument is of type 'SSL_SESSION * (*)(SSL *, u_char *, int,  int *) {aka struct ssl_session_st * (*)(struct ssl_st *, unsigned char *, int,  int *)}'
+ void SSL_CTX_sess_set_get_cb(SSL_CTX *ctx,
+      ^~~~~~~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_id_context':
+src/event/ngx_event_openssl.c:2144:27: error: storage size of 'md' isn't known
+     EVP_MD_CTX            md;
+                           ^~
+src/event/ngx_event_openssl.c:2210:5: error: implicit declaration of function 'EVP_MD_CTX_cleanup' [-Werror=implicit-function-declaration]
+     EVP_MD_CTX_cleanup(&md);
+     ^~~~~~~~~~~~~~~~~~
+src/event/ngx_event_openssl.c: In function 'ngx_ssl_session_ticket_key_callback':
+src/event/ngx_event_openssl.c:2872:9: error: 'RAND_pseudo_bytes' is deprecated [-Werror=deprecated-declarations]
+         RAND_pseudo_bytes(iv, 16);
+         ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/openssl/engine.h:19:0,
+                 from src/event/ngx_event_openssl.h:22,
+                 from src/core/ngx_core.h:85,
+                 from src/event/ngx_event_openssl.c:9:
+/usr/include/openssl/rand.h:47:1: note: declared here
+ DEPRECATEDIN_1_1_0(int RAND_pseudo_bytes(unsigned char *buf, int num))
+ ^
+cc1: all warnings being treated as errors
+objs/Makefile:827: recipe for target 'objs/src/event/ngx_event_openssl.o' failed
+make[1]: *** [objs/src/event/ngx_event_openssl.o] Error 1
+make[1]: Leaving directory '/opt/tengine-2.2.0'
+Makefile:8: recipe for target 'build' failed
+make: *** [build] Error 2
+root@62b06c32c3c4:/opt/tengine-2.2.0#
